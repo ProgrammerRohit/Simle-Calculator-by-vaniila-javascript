@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Rohit Sharma">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <script>
+        function dis(val){
+            document.getElementById("result").value+=val;
+        }
+        function solve(){
+            var x = document.getElementById("result").value;
+            var y = eval(x);
+            document.getElementById("result").value=y;
+        }
+        function clr(){
+            document.getElementById("result").value=" ";
+        }
+    </script>
+    <style>
+        table{
+            margin-top: 100px;
+            margin-left: 500px;
+            width: 300px;
+            height: 300px;
+            background-color: #333333;
+            border: 1px solid black;
+        }
+        #result{
+            width: 250px;
+            height: 50px;
+            color:black;
+            font-size: 25px;
+        }
+        .btn{
+            width:50px;
+            height: 50px;
+            color: white;
+            background-color: black;
+            font-size: 20px;
+        }
+        .gp{
+            padding-left: 15px;
+        }
+        .gp1{
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .btn2{
+            width:50px;
+            height: 50px;
+            color: white;
+            background-color:black;
+            font-size: 20px;
+        }
+        .btn:hover{
+            background-color: #4CAF50;
+        }
+        .btn2:hover{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="3"><input type="text" id="result" disabled></td>
+            <td class="gp1"><input type="button" value="C" onclick="clr()" class="btn2"></td>
+        </tr>
+        <tr>
+            <td class="gp"><input type="button" value="1" onclick="dis('1')" class="btn"></td>
+            <td class="gp"><input type="button" value="2" onclick="dis('2')" class="btn"></td>
+            <td class="gp"><input type="button" value="3" onclick="dis('3')" class="btn"></td>
+            <td class="gp1"><input type="button" value="/" onclick="dis('/')" class="btn"></td>
+        </tr>
+        <tr>
+            <td class="gp"><input type="button" value="4" onclick="dis('4')" class="btn"></td>
+            <td class="gp"><input type="button" value="5" onclick="dis('5')" class="btn"></td>
+            <td class="gp"><input type="button" value="6" onclick="dis('6')" class="btn"></td>
+            <td class="gp1"><input type="button" value="-" onclick="dis('-')" class="btn"></td>
+        </tr>
+        <tr>
+            <td class="gp"><input type="button" value="7" onclick="dis('7')" class="btn"></td>
+            <td class="gp"><input type="button" value="8" onclick="dis('8')" class="btn"></td>
+            <td class="gp"><input type="button" value="9" onclick="dis('9')" class="btn"></td>
+            <td class="gp1"><input type="button" value="+" onclick="dis('+')" class="btn"></td>
+        </tr>
+        <tr>
+            <td class="gp"><input type="button" value="." onclick="dis('.')" class="btn"></td>
+            <td class="gp"><input type="button" value="0" onclick="dis('0')" class="btn"></td>
+            <td class="gp"><input type="button" value="=" onclick="solve('=')" class="btn"></td>
+            <td class="gp1"><input type="button" value="*" onclick="dis('*')" class="btn"></td>
+        </tr>
+    </table>    
+</body>
+</html>
